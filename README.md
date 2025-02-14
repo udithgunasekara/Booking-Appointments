@@ -25,25 +25,28 @@ Based on the project requirements and complexity, I decided to useParam and the 
 ### Booking System
 ### User Account Creation
 
-## Installation
+## Setup Instructions
+1. Clone the repository locally.
+2. Note the project structure:
+   - **Backend:** Located in `Backned/AppointmentBookingSystem` (Spring Boot).
+   - **Frontend:** Located in `frontend/appbooksystem` (React).
+3. For the backend:
+   - Check the `application.properties` file to ensure the database link is correctly configured. For example:
+     ```properties
+     jdbc:mysql://127.0.0.1:3306/Appointment_DB?createDatabaseIfNotExist=true
+     ```
+4. For the frontend:
+   - Run `npm install` to install dependencies.
+   - Run `npm start dev`.
 
-1. Clone the repository:
-```bash
-git clone https://github.com/udithgunasekara/Booking-Appointments.git
-```
+5. Verify Cross-Origin Resource Sharing (CORS) settings:
+   - Ensure the backend CORS configuration matches the frontend project. If necessary, update the `CorsConfig` file (Config > CorsConfig):
+     ```java
+     "http://localhost:5173", "http://127.0.0.1:5173"
+     ```
 
-2. Install dependencies:
-```bash
-cd appbooksystem
-npm install
-```
+## Future Enhancements
+Authentication System
+1. Implement Spring Security with BCrypt password encryption
+2. Implement JWT (JSON Web Token) for session management
 
-3. Start development server:
-```bash
-npm run dev
-```
-
-4. Access the application:
-```
-http://localhost:5173
-```
